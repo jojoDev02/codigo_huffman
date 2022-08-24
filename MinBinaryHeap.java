@@ -167,21 +167,18 @@ public class MinBinaryHeap
 		int q = 0 , frequencia = 0;
 
 		Random random = new Random();
-		//String setOfCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%¨&*()_ -+=/|;:?";
-
-		
+		String setOfCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%¨&*()_ -+=/|;:?";
 
 
 		while (q < tam) {
 
 			int codigoAscii = random.nextInt();
-			simbolo = Character.toChars(codigoAscii);
+			simbolo = setOfCharacters.charAt(codigoAscii);
 			frequencia += random.nextInt(1,200);
 
 
 			Arvbin no = new Arvbin(simbolo, frequencia);
 			insere(no);
-
 			q++;
 		}
 
